@@ -22,7 +22,7 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Arial, sans-serif;
       background: var(--bg-color) no-repeat center center fixed;
       background-size: cover;
       color: var(--text-color);
@@ -31,13 +31,11 @@
       transition: background 0.5s ease, color 0.5s ease;
     }
 
-    /* Animasi foto profil ke atas */
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-8px); }
     }
 
-    /* Animasi kotak link ke bawah */
     @keyframes sink {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(6px); }
@@ -129,7 +127,7 @@
 <body>
 
   <!-- Musik otomatis -->
-  <audio id="bg-music" src="musikdirga.mp3" autoplay loop muted></audio>
+  <audio id="bg-music" src="musikdirga.mp3" autoplay loop muted preload="auto"></audio>
 
   <!-- Foto profil -->
   <img src="fotoprofildirgagtps.jpg" alt="Foto Profil" class="profile-img">
@@ -140,8 +138,8 @@
 
   <!-- Link-link penting -->
   <a href="https://youtube.com/@dirgapromote?si=nKnFj2X8PxPUxl1F" class="link" target="_blank">🎥 My YouTube Channel</a>
-  <a href="https://chat.whatsapp.com/DVm4sE9U0TwF9RdJFPpFFL" class="link" target="_blank">💬 grup promote</a>
-  <a href="https://discord.gg/H5w32Ndyc9" class="link" target="_blank">🧊 discord Community</a>
+  <a href="https://chat.whatsapp.com/DVm4sE9U0TwF9RdJFPpFFL" class="link" target="_blank">💬 Grup Promote</a>
+  <a href="https://discord.gg/H5w32Ndyc9" class="link" target="_blank">🧊 Discord Community</a>
   <a href="https://wa.me/6287838502558" class="link" target="_blank">💬 WhatsApp Saya</a>
 
   <!-- Tombol kontrol -->
