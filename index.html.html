@@ -5,27 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>dirgagtps</title>
   <style>
-    :root {
-      --bg-color: url('backgrounddirga.jpg');
-      --text-color: #fff;
-      --link-bg: rgba(0, 0, 0, 0.6);
-      --link-hover: rgba(255, 255, 255, 0.1);
-      --footer-color: #ccc;
-    }
-
-    body.light-mode {
-      --bg-color: url('lightmode.jpg');
-      --text-color: #222;
-      --link-bg: rgba(255, 255, 255, 0.8);
-      --link-hover: rgba(0, 0, 0, 0.1);
-      --footer-color: #444;
-    }
-
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: var(--bg-color) no-repeat center center fixed;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('backgrounddirga.jpg'); /* Background lokal */
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
       background-size: cover;
-      color: var(--text-color);
+      color: #fff;
       text-align: center;
       padding: 40px;
       transition: background 0.5s ease, color 0.5s ease;
@@ -67,8 +54,8 @@
 
     .link {
       display: block;
-      background: var(--link-bg);
-      color: var(--text-color);
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
       text-decoration: none;
       padding: 15px;
       margin: 12px auto;
@@ -92,42 +79,19 @@
     }
 
     .link:hover {
-      background: var(--link-hover);
+      background: rgba(255, 255, 255, 0.1);
       transform: scale(1.03);
-    }
-
-    .controls {
-      margin-top: 30px;
-    }
-
-    .btn {
-      background: rgba(255, 255, 255, 0.2);
-      border: none;
-      color: var(--text-color);
-      padding: 10px 20px;
-      margin: 10px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    .btn:hover {
-      background: rgba(255, 255, 255, 0.4);
-      transform: scale(1.05);
     }
 
     footer {
       margin-top: 50px;
       font-size: 15px;
-      color: var(--footer-color);
+      color: #ccc;
       text-shadow: 1px 1px 3px #000;
     }
   </style>
 </head>
 <body>
-
-  <!-- Musik otomatis -->
-  <audio id="bg-music" src="musikdirga.mp3" autoplay loop muted preload="auto"></audio>
 
   <!-- Foto profil -->
   <img src="fotoprofildirgagtps.jpg" alt="Foto Profil" class="profile-img">
@@ -138,35 +102,14 @@
 
   <!-- Link-link penting -->
   <a href="https://youtube.com/@dirgapromote?si=nKnFj2X8PxPUxl1F" class="link" target="_blank">🎥 My YouTube Channel</a>
-  <a href="https://chat.whatsapp.com/DVm4sE9U0TwF9RdJFPpFFL" class="link" target="_blank">💬 Grup Promote</a>
-  <a href="https://discord.gg/H5w32Ndyc9" class="link" target="_blank">🧊 Discord Community</a>
+  <a href="https://chat.whatsapp.com/DVm4sE9U0TwF9RdJFPpFFL" class="link" target="_blank">💬 grup promote</a>
+  <a href="https://discord.gg/H5w32Ndyc9" class="link" target="_blank">🧊 discord Community</a>
   <a href="https://wa.me/6287838502558" class="link" target="_blank">💬 WhatsApp Saya</a>
-
-  <!-- Tombol kontrol -->
-  <div class="controls">
-    <button class="btn" onclick="toggleMusic()">🔇 Mute Musik</button>
-    <button class="btn" onclick="toggleMode()">🌗 Ganti Mode</button>
-  </div>
 
   <!-- Footer -->
   <footer>
     &copy; 2025 dirgagtps. Created by Rico 👨🏻‍💻 | 📞 +6287838502558
   </footer>
-
-  <!-- Script interaktif -->
-  <script>
-    const audio = document.getElementById('bg-music');
-    let isMuted = false;
-
-    function toggleMusic() {
-      isMuted = !isMuted;
-      audio.muted = isMuted;
-    }
-
-    function toggleMode() {
-      document.body.classList.toggle('light-mode');
-    }
-  </script>
 
 </body>
 </html>
